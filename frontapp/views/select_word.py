@@ -12,7 +12,7 @@ def select_word(request):
     if res.status_code == 200:
         topic = res.json()
     words = {}
-    res = get('http://{}:8000/api/pod_words'.format('HOST'))
+    res = get('http://{}:8000/api/pod_words'.format(os.getenv('HOST'))
     if res.status_code == 200:
         words = res.json()
     topic_words = []
