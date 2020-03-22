@@ -29,14 +29,14 @@ window.onload = function() {
 	// get the topic name through the api
 	
 	let id = $('div#topic_id').text();
-	let url = 'http://127.0.0.1:8000/api/pod_topic/' + id;
+	let url = 'http://52.55.234.129:8000/api/pod_topic/' + id;
 	var topic;
 	$.getJSON(url, function (data) {
   		$(".topic").text(data.topic_name);
 	});
 	// get words throught the api
 	
-	url = 'http://127.0.0.1:8000/api/pod_words';
+	url = 'http://52.55.234.129:8000/api/pod_words';
 	$.getJSON(url, function(data){
 		//console.log(data);
 		for (let i = 0; i < data.length; i++) {
